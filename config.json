@@ -1,0 +1,20 @@
+
+{
+    
+
+    "section1":{
+        "texto1":"STEP 1 OF 3",
+        "titulo":"Choose the plan that it's right for you",
+        "bloque":[
+            {
+                "texto":"Watch all you want. Add-free."
+            },
+            {
+                "texto":" Recomendations just for you."
+            },
+            {
+                "texto":"Change or cancel your plan anytime."
+            }
+        ]
+    }
+}
