@@ -10,8 +10,20 @@ body {
   max-width: 700px;
 }
 
+.row-cols-md-3>* {
+  width: 20%;
+}
+
+.card {
+  --bs-card-border-radius: 0;
+}
 .ms-xxl-5 {
   margin-left: 15rem!important;
+}
+
+.ms-xxl-5{
+  margin-left: 15rem!important;
+  margin-right: 15rem!important;
 }
 
 .bd-placeholder-img {
