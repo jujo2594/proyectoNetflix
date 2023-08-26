@@ -70,10 +70,10 @@ let construirTarjetas = async()=>{
 
 construirTarjetas();
 
+let construirTabla = async() =>{
+    let peticion = await fetch (`${path}.json`);
+    let res = await peticion.json();
+    
+}
 
-// (async()=>{
-//      let peticion = await fetch(`${path}.json`);
-//      let res = await peticion.json();
-//      console.log(res);
-// })("config")
 

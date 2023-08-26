@@ -1,10 +1,9 @@
-
 {
     "navBar":{
         "logo":"./assets/netflixLogo.png",
         "textoIngreso": "Sign In"
     },
-    
+
     "section1":{
         "texto1":"STEP 1 OF 3",
         "titulo":"Choose the plan that it's right for you",
@@ -34,8 +33,39 @@
             "textoPlan":"Premium",
             "textoPrecio":"$ 19,99"
         }
-    ]
+    ],
 
+    "table":{
+        "tHead":[
+            {   
+                "tag1": "",
+                "tag2":"BASIC",
+                "tag3":"STANDARD",
+                "tag4":"PREMIUM"
+            }
+        ],
 
-        
+        "tBody":[
+            {
+                "feature":"Video Quality",
+                "texto1":"Good",
+                "texto2":"Better",
+                "texto3":"Best"
+            },
+
+            {
+                "feature":"Resolution",
+                "texto1":"720p",
+                "texto2":"1080p",
+                "texto3":"4K+HDR" 
+            },
+
+            {
+                "feature":"Watch on your TV, computer, mobile phone and tablet",
+                "check1":"<svg class='bi' width='24' height='24'><use class='text-secondary' xlink:href='#check'/></svg>",
+                "check2":"<svg class='bi' width='24' height='24'><use class='text-secondary' xlink:href='#check'/></svg>",
+                "check3":"<svg class='bi' width='24' height='24'><use class='text-secondary' xlink:href='#check'/></svg>"
+            }
+        ]
+    }
 }
