@@ -99,3 +99,14 @@ let construirTabla = async() =>{
 construirTabla();
 
 
+let construirTexto = async()=>{
+    let peticion = await fetch(`${path}.json`);
+    let res = await peticion.json();
+    let seleccion = document.querySelector('#myJsonText');
+    seleccion.insertAdjacentHTML('beforeend',/* HTML */`   
+        <p>${res.bloque3.texto}</p>
+    `)
+}
+
+construirTexto();
+
