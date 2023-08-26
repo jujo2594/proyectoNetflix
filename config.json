@@ -1,5 +1,9 @@
 
 {
+    "navBar":{
+        "logo":"./assets/netflixLogo.png",
+        "textoIngreso": "Sign In"
+    },
     
     "section1":{
         "texto1":"STEP 1 OF 3",
@@ -17,21 +21,21 @@
         ]
     },
 
-    "section2":{
-        "bloque":[
-            {
-                "textoPlan":"Basic",
-                "textoPrecio":"$ 6,99"
-            },
-            {
-                "textoPlan":"Standard",
-                "textoPrecio":"$ 15,49"
-            },
-            {
-                "textoPlan":"Premium",
-                "textoPrecio":"$ 19,99"
-            }
-        ]
+    "bloque2":[
+        {
+            "textoPlan":"Basic",
+            "textoPrecio":"$ 6,99"
+        },
+        {
+            "textoPlan":"Standard",
+            "textoPrecio":"$ 15,49"
+        },
+        {
+            "textoPlan":"Premium",
+            "textoPrecio":"$ 19,99"
+        }
+    ]
 
-    }
+
+        
 }
