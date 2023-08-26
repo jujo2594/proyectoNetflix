@@ -62,9 +62,9 @@
 
             {
                 "feature":"Watch on your TV, computer, mobile phone and tablet",
-                "check1":"<svg class='bi' width='24' height='24'><use class='text-secondary' xlink:href='#check'/></svg>",
-                "check2":"<svg class='bi' width='24' height='24'><use class='text-secondary' xlink:href='#check'/></svg>",
-                "check3":"<svg class='bi' width='24' height='24'><use class='text-secondary' xlink:href='#check'/></svg>"
+                "texto1":"<svg class='bi' width='24' height='24'><use class='text-secondary' xlink:href='#check'/></svg>",
+                "texto2":"<svg class='bi' width='24' height='24'><use class='text-secondary' xlink:href='#check'/></svg>",
+                "texto3":"<svg class='bi' width='24' height='24'><use class='text-secondary' xlink:href='#check'/></svg>"
             }
         ]
     }

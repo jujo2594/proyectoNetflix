@@ -73,7 +73,29 @@ construirTarjetas();
 let construirTabla = async() =>{
     let peticion = await fetch (`${path}.json`);
     let res = await peticion.json();
-    
+    let seleccion = document.querySelector('#myJsonTable');
+        seleccion.insertAdjacentHTML('beforeend', /* HTML */ `
+            ${res.table.tHead.map((value)=>/* HTML */`
+            <thead>
+                <tr>
+                    <th  style="width: 34%;">${value.tag1}</th>
+                    <th class="fs-5 fw-semibold" style="width: 22%;">${value.tag2}</th>
+                    <th class="fs-5 fw-semibold" style="width: 22%;">${value.tag3}</th>
+                    <th class="fs-5 fw-semibold" style="width: 22%;">${value.tag4}</th>
+                </tr>
+            </thead>
+            `).join(" ")}
+            ${res.table.tBody.map((value)=>/* HTML */`
+                <tr>
+                    <th scope="row" class="text-start fs-5 fw-light">${value.feature}</th>
+                    <td class="fs-5 fw-normal text-secondary">${value.texto1}</td>
+                    <td class="fs-5 fw-normal text-secondary">${value.texto2}</td>
+                    <td class="fs-5 fw-normal text-secondary">${value.texto3}</td>
+                </tr>
+            `).join(" ")}
+        `);
 }
+
+construirTabla();
 
 
