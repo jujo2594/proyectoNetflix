@@ -110,3 +110,24 @@ let construirTexto = async()=>{
 
 construirTexto();
 
+let construirFooter = async()=>{
+    let peticion = await fetch(`${path}.json`);
+    let res = await peticion.json();
+    let seleccion = document.querySelector('#myJsonFooter');
+    seleccion.insertAdjacentHTML('beforeend',/* HTML */`
+        <div class="col-12 col-md">
+            <small class="d-block mb-3 text-body-secondary">&copy; ${res.footer.textoSmall}</small>
+        </div>
+            ${res.footer.about.map((value)=>/* HTML */`
+            <div class="col-6 col-md">
+                <ul class="list-unstyled text-small">
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">${value.tag1}</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">${value.tag2}</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">${value.tag3}</a></li>
+                </ul>
+            </div>
+        `).join(" ")};
+    `)
+};
+
+construirFooter();
