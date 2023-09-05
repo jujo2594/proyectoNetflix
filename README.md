@@ -21,14 +21,6 @@ I used a '.png' file for the netflix logo, and I modified the menu just leaving 
         </nav>
       </div>
 
-      <div class="pricing-header ms-xxl-5 text-start">
-        <h3 class="fs-6 fw-light">STEP 1 OF 3</h3>
-        <h1 class="display-4 fs-2 fw-semibold text-body-emphasis">Choose the plan that it's right for you</h1>
-        <p class="d-flex flex-row align-items-center column-gap-2 fs-6 text-body-secondary"><svg class="bi" width="35" height="35"><use class="text-danger" xlink:href="#check"/></svg> Watch all you want. Add-free.</p>
-        <p class="d-flex flex-row align-items-center column-gap-2 fs-6 text-body-secondary"><svg class="bi" width="35" height="35"><use class="text-danger" xlink:href="#check"/></svg> Recomendations just for you.</p>
-        <p class="d-flex flex-row align-items-center column-gap-2 fs-6 text-body-secondary"><svg class="bi" width="35" height="35"><use class="text-danger" xlink:href="#check"/></svg> Change or cancel your plan anytime.</p>
-      </div>
-    </header>
 ```
 
 
@@ -102,33 +94,7 @@ Finally in the main section, I just added a paragraph with addional information 
             </tr>
           </tbody>
 
-          <tbody>
-            <tr>
-              <th scope="row" class="text-start fs-5 fw-light">Watch on your TV, computer, mobile phone and tablet</th>
-              <td><svg class="bi" width="24" height="24">
-                  <use class="text-secondary" xlink:href="#check" />
-                </svg></td>
-              <td><svg class="bi" width="24" height="24">
-                  <use class="text-secondary" xlink:href="#check" />
-                </svg></td>
-              <td><svg class="bi" width="24" height="24">
-                  <use class="text-secondary" xlink:href="#check" />
-                </svg></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="fs-6 fw-light text-secondary w-75 ms-xxl-4">
-        <p>
-          HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our <a href="https://help.netflix.com/legal/termsofuse">Terms of Use</a> for more details.
-          Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic.
-        </p>
-      </div>
-    </main>
 ```
-
-
 
 #### FOOTER: 
 
@@ -149,19 +115,31 @@ Finallly the footer section, I just modified the text content and I change the f
             <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cookie Preferences</a></li>
           </ul>
         </div>
-        <div class="col-6 col-md">
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Netflix Shop</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Corporate Information</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms of Use</a></li>
-          </ul>
-        </div>
-      </div>
     </footer>
 ```
+All this was for the initial structure of the netflix website and the styles, the second part of this project is to insert the main content using a local json, with javascript.
 
+
+#### MAIN JS: 
+
+I use a json to organize and insert the content into our html file, for the main content and made the website more interanctive. I create function for each section of the netflix select plan site just to being organized. 
+
+This is an example for the navbar content. Besides, I create fucntions for the header, cards, tables, text and footer.
+
+```JAVASCRIPT
+let construirNavBar = async()=>{
+    let peticion = await fetch(`${path}.json`);
+    let res = await peticion.json();
+    let seleccion = document.querySelector('#myJsonNavBar');
+    seleccion.insertAdjacentHTML('beforeend',/* HTML */`   
+    <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+        <span class="fs-4">
+            <img src=${res.navBar.logo} alt="logo">
+        </span>
+    </a>
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="py-2 link-body-emphasis text-decoration-none --bs-gray-600" href="#">${res.navBar.textoIngreso}</a>
+    </nav>
+    `)
+}
+```
